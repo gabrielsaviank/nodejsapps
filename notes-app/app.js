@@ -1,5 +1,12 @@
-const add = require('./utils.js')
+const chalk = require('chalk')
+const getNotes = require('./notes.js')
 
-const sum = add(4, -2)
+const command = process.argv[2]
 
-console.log(sum)
+console.log(process.argv)
+
+if (command == 'add') {
+    console.log('Note Added!')
+} else if (command == 'remove') {
+    console.log('Note removed!')
+}
